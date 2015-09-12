@@ -1,0 +1,42 @@
+Simulation of the Normal Distribution
+========================================================
+author: KB
+date: `r date()`
+transition: concave
+
+Purpose
+========================================================
+type: sub-section
+
+This application allows the user to simulate and plot a basic normal distribution.
+
+- Number of observations range from 0 to 300
+- Mean can range from 0 to 100
+- Standard Deviation can range from 0 to 50
+
+Sample range of values
+========================================================
+type: sub-section
+
+```{r}
+runif(150, 0, 100)
+```
+
+Sample plot from application
+========================================================
+type: sub-section
+
+```{r, echo=FALSE}
+observations <- runif(150, 0, 100)
+plot(observations, dnorm(observations,mean=25,sd=10), type='p',
+         xlab="Observation Value", ylab="", yaxt='n')
+```
+
+Why?
+=========================================================
+type: sub-section
+
+To provide students that are new to statistics and/or R an introduction 
+to the normal distribution and to R/Shiny. This application allows the student
+to manipulate certain characteristics of the distribution and visually observe
+the effects of those changes
